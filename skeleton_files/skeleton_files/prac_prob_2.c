@@ -5,19 +5,37 @@
 //123
 //1234
 
+#define _CRT_SECURE_NO_WARNINGS
+
 #include <stdio.h>
+#include <stdlib.h>
+
 int main(void){
     
     //Variables
-    //hint: int i,j,rows;
+	int i, j, rows;
     
     //Output for User Prompt
-    //printf("Input number of rows: ");
+    printf("Input number of rows: ");
     
     //Input for User
-    //scanf("%d",&rows);
+    scanf("%d",&rows);
     
     //Loop Logic
-    /*write code here*/
-    
+	//Row loop
+	for (i = 0; i < rows; i++) {
+		// define max column number by row
+		int cols = i + 1;
+		// Column loop
+		for (j = 1; j <= cols; j++) {
+			//print column numbers
+			printf("%d", j);
+		}
+		
+		// new row
+		printf("\n");
+	}
+
+	system("PAUSE");
+	return 0;
 }
