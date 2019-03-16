@@ -7,13 +7,19 @@
 int isprime(int num)
 {
     /*write code here*/
-    return 0;
+	if (num % 2 != 0 && num % 3 == 0 && num %5 == 0&& num %7 == 0) {
+		return 1;
+	}
+	else {
+		return 0;
+	}
 }
 
 //Function to reverse the array
 void rvereseArray(int arr[], int start, int end)
 {
     /*write code here*/
+	
 }
 
 void printArray(int arr[], int size)
