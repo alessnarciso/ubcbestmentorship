@@ -5,19 +5,36 @@
 //123
 //1234
 
+#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
+
+
 int main(void){
     
     //Variables
-    //hint: int i,j,rows;
+    int i,j,rows;
     
     //Output for User Prompt
-    //printf("Input number of rows: ");
+    printf("Input number of rows: ");
     
     //Input for User
-    //scanf("%d",&rows);
+    scanf("%d",&rows);
     
     //Loop Logic
     /*write code here*/
     
+	for (i = 1; i <= rows; i++) {
+
+		for (j = 0; j < i; j++) {
+
+			printf("%d", j+1);
+
+		}
+
+		printf("\n");
+
+	}
+
+	return 0;
+
 }
