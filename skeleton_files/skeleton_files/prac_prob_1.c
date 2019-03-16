@@ -4,6 +4,8 @@
 
 int main(void){
     
+    printf("Hello World");
+    
     //Variables
     //hint: int num1,num2,sum;
     
