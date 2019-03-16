@@ -9,15 +9,20 @@
 int main(void){
     
     //Variables
-    //hint: int i,j,rows;
+    int i,j,rows;
     
     //Output for User Prompt
-    //printf("Input number of rows: ");
+    printf("Input number of rows: ");
+	//Input from user
+    scanf("%d",&rows);
     
-    //Input for User
-    //scanf("%d",&rows);
-    
-    //Loop Logic
-    /*write code here*/
+    //controls the number of rows printed 
+	for (i = 1; i <= rows; i++) {
+	//prints the correct number of elements on each line
+		for (j = 1; j <= i; j++) {
+			printf("%d\n", j);
+		}
+		printf("\n");
+	}
     
 }

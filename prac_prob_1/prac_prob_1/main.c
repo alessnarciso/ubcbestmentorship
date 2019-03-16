@@ -1,4 +1,4 @@
-//
+ //
 //  main.c
 //  prac_prob_1
 //
