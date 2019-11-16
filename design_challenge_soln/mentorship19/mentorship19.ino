@@ -3,7 +3,7 @@
  *  Using Arduino Uno, LED, potentiometer, DHT22, 3x1k resistors
  *  By: Alessandro Narciso
 
-
+//alesandro suxs
 Servo setup: https://www.arduino.cc/en/Tutorial/Knob
 DHT setup: https://www.instructables.com/id/How-to-use-DHT-22-sensor-Arduino-Tutorial/
 RGB setup: https://randomnerdtutorials.com/electronics-basics-how-do-rgb-leds-work/
