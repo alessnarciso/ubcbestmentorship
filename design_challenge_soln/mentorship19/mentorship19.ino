@@ -155,7 +155,12 @@ void loop()
     
   }
 
-
+  else
+  {
+    digitalWrite(RGB_red,LOW);
+    digitalWrite(RGB_blue,LOW);
+    digitalWrite(RGB_green,LOW);
+  }
   
   // seperator for lines
   Serial.println("- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -");
