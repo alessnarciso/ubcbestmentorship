@@ -22,15 +22,15 @@ Photoresistor setup: https://www.instructables.com/id/How-to-use-a-photoresistor
 #define DHTTYPE DHT22   // DHT 22  (AM2302)
 
 //photoresistor pin
-#define lightPin A0
+#define lightPin 2
 
 //servo pin
-#define servoPin 5
+#define servoPin 6
 
 //LED pins
-int RGB_red = 6;
-int RGB_green = 11;
-int RGB_blue = 10;
+int RGB_red = 9;
+int RGB_green = 8;
+int RGB_blue = 11;
 
 /**** INITIALIZE ********************/
 DHT dht(DHTPIN, DHTTYPE); //temp/hum sensor
@@ -110,7 +110,7 @@ void loop()
 
   
   //change LED color to red if conditions are bad
-  if(lightPercent >= 85 || t > 26)
+  if(lightPercent >= 50 || t > 26)
   {
     digitalWrite(RGB_red,LOW);
     digitalWrite(RGB_blue,HIGH);
