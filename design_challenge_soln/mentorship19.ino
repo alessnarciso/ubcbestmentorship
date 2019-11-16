@@ -115,6 +115,18 @@ void loop()
     digitalWrite(RGB_red,LOW);
     digitalWrite(RGB_blue,HIGH);
     digitalWrite(RGB_green,HIGH);
+
+    for (pos = 0; pos <= 180; pos += 10) { // goes from 0 degrees to 180 degrees
+      
+      // in steps of 1 degree
+      myservo.write(pos);              // tell servo to go to position in variable 'pos'
+      delay(5);                       // waits 15ms for the servo to reach the position
+    }
+    
+    for (pos = 180; pos >= 0; pos -= 10) { // goes from 180 degrees to 0 degrees
+      myservo.write(pos);              // tell servo to go to position in variable 'pos'
+      delay(5);                       // waits 15ms for the servo to reach the position
+    }
   }
 
   else if(lightPercent >= 50 && lightPercent < 85 || (t >= 24 && t <=26))
@@ -122,28 +134,24 @@ void loop()
     digitalWrite(RGB_red,HIGH);
     digitalWrite(RGB_blue,LOW);
     digitalWrite(RGB_green,HIGH);
-  }
 
-  else if(lightPercent < 40 && t < 24){
-    digitalWrite(RGB_red,HIGH);
-    digitalWrite(RGB_blue,HIGH);
-    digitalWrite(RGB_green,LOW);
-  }
-  
-  //move servo if light too intense
-  if(lightPercent >= 50 || t >= 24){
-
-    for (pos = 0; pos <= 180; pos += 5) { // goes from 0 degrees to 180 degrees
+    for (pos = 0; pos <= 180; pos += 3) { // goes from 0 degrees to 180 degrees
       
       // in steps of 1 degree
       myservo.write(pos);              // tell servo to go to position in variable 'pos'
-      delay(15);                       // waits 15ms for the servo to reach the position
+      delay(7);                       // waits 15ms for the servo to reach the position
     }
     
-    for (pos = 180; pos >= 0; pos -= 5) { // goes from 180 degrees to 0 degrees
+    for (pos = 180; pos >= 0; pos -= 3) { // goes from 180 degrees to 0 degrees
       myservo.write(pos);              // tell servo to go to position in variable 'pos'
-      delay(15);                       // waits 15ms for the servo to reach the position
+      delay(7);                       // waits 15ms for the servo to reach the position
     }
+  }
+
+  else if(lightPercent < 50 && t < 24){
+    digitalWrite(RGB_red,HIGH);
+    digitalWrite(RGB_blue,HIGH);
+    digitalWrite(RGB_green,LOW);
     
   }
   
