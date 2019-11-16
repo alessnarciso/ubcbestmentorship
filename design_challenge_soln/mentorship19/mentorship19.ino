@@ -18,7 +18,7 @@ Photoresistor setup: https://www.instructables.com/id/How-to-use-a-photoresistor
 
 /**** PINS DEFINITIONS ********************/
 //temp/hum sensor pins
-#define DHTPIN 4     // what pin we're connected to
+#define DHTPIN 2     // what pin we're connected to
 #define DHTTYPE DHT22   // DHT 22  (AM2302)
 
 //photoresistor pin
@@ -28,8 +28,8 @@ Photoresistor setup: https://www.instructables.com/id/How-to-use-a-photoresistor
 #define servoPin 5
 
 //LED pins
-int RGB_red = 6;
-int RGB_green = 11;
+int RGB_red = 8;
+int RGB_green = 9;
 int RGB_blue = 10;
 
 /**** INITIALIZE ********************/
@@ -87,8 +87,8 @@ void loop()
   // printing the sensor outputs on serial monitor
 
   //for debugging and calibrating photoresistor voltage drop
-  //Serial.print("Photoresistance: ");
-  //Serial.print(lightSensorValue);
+  Serial.print("Photoresistance: ");
+  Serial.print(lightSensorValue);
   //when in series with 1k resistor: low = 0-100, high = 900
    
  // convert photoresistor resistance readings to more meaningful values 
