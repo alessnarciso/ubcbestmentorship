@@ -21,7 +21,7 @@ Photoresistor setup: https://www.instructables.com/id/How-to-use-a-photoresistor
 #define DHTPIN 13     // what pin we're connected to
 #define DHTTYPE DHT22   // DHT 22  (AM2302)
 
-//photoresistor pin
+
 #define lightPin A0
 
 //servo pin
