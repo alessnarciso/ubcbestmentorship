@@ -18,19 +18,19 @@ Photoresistor setup: https://www.instructables.com/id/How-to-use-a-photoresistor
 
 /**** PINS DEFINITIONS ********************/
 //temp/hum sensor pins
-#define DHTPIN 4     // what pin we're connected to
+#define DHTPIN 13     // what pin we're connected to
 #define DHTTYPE DHT22   // DHT 22  (AM2302)
 
 //photoresistor pin
 #define lightPin A0
 
 //servo pin
-#define servoPin 5
+#define servoPin 9
 
 //LED pins
-int RGB_red = 6;
-int RGB_green = 11;
-int RGB_blue = 10;
+int RGB_red = 4;
+int RGB_green = 2;
+int RGB_blue = 3;
 
 /**** INITIALIZE ********************/
 DHT dht(DHTPIN, DHTTYPE); //temp/hum sensor
